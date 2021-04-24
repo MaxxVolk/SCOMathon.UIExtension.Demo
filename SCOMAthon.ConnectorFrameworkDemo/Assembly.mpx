@@ -1,0 +1,17 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Resources>
+    <!-- 
+      Assembly: Console extension, including components, views, data queries, etc.
+      DeployableAssembly: agent actions like probe/write action, data source, etc.
+    -->
+    <Assembly ID="SCOMAthon.ConnectorFrameworkDemo.Maximus.Base.Library.Console.Assembly" Accessibility="Public" HasNullStream="false"
+              FileName="Maximus.Base.Library.Console.dll"
+              QualifiedName="Maximus.Base.Library.Console, Version=1.0.1.0, Culture=neutral, PublicKeyToken=fd5098a6a3259696"
+              Comment="Base assembly for SCOM Console extensions. Must not be referenced in Module Type projects. Must not be referenced together with base managed workflow library." />
+    <Assembly ID="SCOMAthon.ConnectorFrameworkDemo.Modules.Assembly" Accessibility="Internal" HasNullStream="false"
+              FileName="SCOMAthon.ConnectorFrameworkDemo.Modules.dll"
+              QualifiedName="SCOMAthon.ConnectorFrameworkDemo.Modules, Version=1.0.0.3, Culture=neutral, PublicKeyToken=52fc4999228d34f7">
+      <Dependency ID="SCOMAthon.ConnectorFrameworkDemo.Maximus.Base.Library.Console.Assembly"/>
+    </Assembly>
+  </Resources>
+</ManagementPackFragment>

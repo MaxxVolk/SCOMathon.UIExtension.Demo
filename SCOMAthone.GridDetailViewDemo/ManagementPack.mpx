@@ -1,0 +1,12 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <DisplayStrings>
+        <DisplayString ElementID="SCOMAthon.GridDetailViewDemo">
+          <Name>SCOMAthon Grid and Detail View Demo</Name>
+          <Description>Demo management pack to create a grid view with details SCOM Console extension.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>

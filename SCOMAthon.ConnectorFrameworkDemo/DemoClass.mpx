@@ -1,0 +1,33 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TypeDefinitions>
+    <EntityTypes>
+      <ClassTypes>
+        <ClassType ID="SCOMAthon.ConnectorFrameworkDemo.DemoClass" Base="System!System.Entity" 
+                   Accessibility="Internal" Abstract="false" Hosted="false" Singleton="false">
+          <Property ID="KeyProperty" Type="string" Key="true" CaseSensitive="false"/>
+          <Property ID="StringProperty" Type="string"/>
+          <Property ID="IntProperty" Type="int"/>
+        </ClassType>
+      </ClassTypes>
+    </EntityTypes>
+  </TypeDefinitions>
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <DisplayStrings>
+        <DisplayString ElementID="SCOMAthon.ConnectorFrameworkDemo.DemoClass">
+          <Name>SCOMAthon Demo Class</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="SCOMAthon.ConnectorFrameworkDemo.DemoClass" SubElementID="KeyProperty">
+          <Name>Key (String)</Name>
+        </DisplayString>
+        <DisplayString ElementID="SCOMAthon.ConnectorFrameworkDemo.DemoClass" SubElementID="StringProperty">
+          <Name>String Value</Name>
+        </DisplayString>
+        <DisplayString ElementID="SCOMAthon.ConnectorFrameworkDemo.DemoClass" SubElementID="IntProperty">
+          <Name>Integer Value</Name>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>

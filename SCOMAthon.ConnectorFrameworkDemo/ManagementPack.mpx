@@ -1,0 +1,12 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <DisplayStrings>
+        <DisplayString ElementID="SCOMAthon.ConnectorFrameworkDemo">
+          <Name>SCOMAthon Managed Object Insert Demo</Name>
+          <Description>Demonstrates using SCOM Console UI extension and Connector Framework to edit managed SCOM objects.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>

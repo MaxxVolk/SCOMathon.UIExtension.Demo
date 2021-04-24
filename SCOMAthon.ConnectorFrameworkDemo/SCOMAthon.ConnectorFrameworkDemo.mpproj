@@ -1,0 +1,94 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{be7c26ca-f4fc-41b6-8832-b47dd0a44340}</ProjectGuid>
+    <RootNamespace>SCOMAthon.ConnectorFrameworkDemo</RootNamespace>
+    <Name>SCOMAthon.ConnectorFrameworkDemo</Name>
+    <ManagementPackName>SCOMAthon.ConnectorFrameworkDemo</ManagementPackName>
+    <Version>1.0.0.0</Version>
+    <MpFrameworkVersion>v7.0.2</MpFrameworkVersion>
+    <MpFrameworkProfile>OM</MpFrameworkProfile>
+    <ProductVersion>1.1.0.0</ProductVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <GenerateSealed>false</GenerateSealed>
+    <Company>MyCompany</Company>
+    <Copyright>Copyright (c) MyCompany. All rights reserved.</Copyright>
+    <DelaySigning>false</DelaySigning>
+    <AssemblyOriginatorKeyFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+    <DelaySigning>False</DelaySigning>
+    <Company>Maximus</Company>
+    <Copyright>Copyright (c) Maximus. All rights reserved.</Copyright>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>C:\Projects\SCOMAuthoring\SCOMAthon Demo\.key\SCOMAthon-Demo.snk</AssemblyOriginatorKeyFile>
+    <GenerateSealed>True</GenerateSealed>
+  </PropertyGroup>
+  <ItemGroup>
+    <ManagementPackReference Include="Microsoft.SystemCenter.Library">
+      <Alias>SC</Alias>
+      <PackageToBundle>false</PackageToBundle>
+    </ManagementPackReference>
+    <ManagementPackReference Include="Microsoft.SystemCenter.OperationsManager.Library">
+      <HintPath>C:\Program Files (x86)\System Center Visual Studio Authoring Extensions\References\OM2012R2\Microsoft.SystemCenter.OperationsManager.Library.mp</HintPath>
+      <Alias>MSOL</Alias>
+      <MinVersion>7.1.10226.0</MinVersion>
+    </ManagementPackReference>
+    <ManagementPackReference Include="Microsoft.Windows.Library">
+      <Alias>Windows</Alias>
+      <PackageToBundle>false</PackageToBundle>
+    </ManagementPackReference>
+    <ManagementPackReference Include="System.Health.Library">
+      <Alias>Health</Alias>
+      <PackageToBundle>false</PackageToBundle>
+    </ManagementPackReference>
+    <ManagementPackReference Include="System.Library">
+      <Alias>System</Alias>
+      <PackageToBundle>false</PackageToBundle>
+    </ManagementPackReference>
+    <ManagementPackReference Include="Microsoft.SystemCenter.Visualization.Library">
+      <Alias>Visualization</Alias>
+      <PackageToBundle>false</PackageToBundle>
+    </ManagementPackReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SCOMAthon.ConnectorFrameworkDemo.Modules\SCOMAthon.ConnectorFrameworkDemo.Modules.csproj">
+      <Name>SCOMAthon.ConnectorFrameworkDemo.Modules</Name>
+      <Project>{589138e9-a212-4668-b461-954e98ebc178}</Project>
+      <Private>True</Private>
+      <PackageToBundle>True</PackageToBundle>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Maximus.Base.Library.Console, Version=1.0.1.0, Culture=neutral, PublicKeyToken=fd5098a6a3259696">
+      <Name>Maximus.Base.Library.Console</Name>
+      <AssemblyName>Maximus.Base.Library.Console.dll</AssemblyName>
+      <HintPath>..\Packages\Maximus.Base.Library.Console\Maximus.Base.Library.Console.dll</HintPath>
+      <Private>True</Private>
+      <PackageToBundle>True</PackageToBundle>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assembly.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DemoClass.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ManagementPack.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UI.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SCOMClassToCSharp.ps1" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VSAC\Microsoft.SystemCenter.OperationsManager.targets" />
+</Project>

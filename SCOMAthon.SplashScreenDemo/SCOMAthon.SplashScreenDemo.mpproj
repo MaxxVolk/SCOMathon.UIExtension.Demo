@@ -1,0 +1,74 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{65bf6eed-eb8c-4682-93e2-4a4722e3fe44}</ProjectGuid>
+    <RootNamespace>SCOMAthon.SplashScreenDemo</RootNamespace>
+    <Name>SCOMAthon.SplashScreenDemo</Name>
+    <ManagementPackName>SCOMAthon.SplashScreenDemo</ManagementPackName>
+    <Version>1.0.0.0</Version>
+    <MpFrameworkVersion>v7.0.2</MpFrameworkVersion>
+    <MpFrameworkProfile>OM</MpFrameworkProfile>
+    <ProductVersion>1.1.0.0</ProductVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <GenerateSealed>false</GenerateSealed>
+    <Company>MyCompany</Company>
+    <Copyright>Copyright (c) MyCompany. All rights reserved.</Copyright>
+    <DelaySigning>false</DelaySigning>
+    <AssemblyOriginatorKeyFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+    <DelaySigning>False</DelaySigning>
+    <Company>Maximus</Company>
+    <Copyright>Copyright (c) Maximus. All rights reserved.</Copyright>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>C:\Projects\SCOMAuthoring\SCOMAthon Demo\.key\SCOMAthon-Demo.snk</AssemblyOriginatorKeyFile>
+    <GenerateSealed>True</GenerateSealed>
+  </PropertyGroup>
+  <ItemGroup>
+    <ManagementPackReference Include="Microsoft.SystemCenter.Library">
+      <Alias>SC</Alias>
+      <PackageToBundle>false</PackageToBundle>
+    </ManagementPackReference>
+    <ManagementPackReference Include="Microsoft.Windows.Library">
+      <Alias>Windows</Alias>
+      <PackageToBundle>false</PackageToBundle>
+    </ManagementPackReference>
+    <ManagementPackReference Include="System.Health.Library">
+      <Alias>Health</Alias>
+      <PackageToBundle>false</PackageToBundle>
+    </ManagementPackReference>
+    <ManagementPackReference Include="System.Library">
+      <Alias>System</Alias>
+      <PackageToBundle>false</PackageToBundle>
+    </ManagementPackReference>
+    <ManagementPackReference Include="Microsoft.SystemCenter.Visualization.Library">
+      <Alias>Visualization</Alias>
+      <PackageToBundle>false</PackageToBundle>
+    </ManagementPackReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assembly.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ManagementPack.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UI.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SCOMAthon.SplashScreenDemo.Modules\SCOMAthon.SplashScreenDemo.Modules.csproj">
+      <Name>SCOMAthon.SplashScreenDemo.Modules</Name>
+      <Project>{577ef59e-1e63-4359-b153-8b9810916298}</Project>
+      <Private>True</Private>
+      <PackageToBundle>True</PackageToBundle>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VSAC\Microsoft.SystemCenter.OperationsManager.targets" />
+</Project>

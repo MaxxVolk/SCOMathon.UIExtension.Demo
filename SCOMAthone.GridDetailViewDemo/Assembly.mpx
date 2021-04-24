@@ -1,0 +1,11 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Resources>
+    <!-- 
+      Assembly: Console extension, including components, views, data queries, etc.
+      DeployableAssembly: agent actions like probe/write action, data source, etc.
+    -->
+    <Assembly ID="SCOMAthon.GridDetailViewDemo.Modules.Assembly" Accessibility="Internal" HasNullStream="false"
+              FileName="SCOMAthon.GridDetailViewDemo.Modules.dll"
+              QualifiedName="SCOMAthon.GridDetailViewDemo.Modules, Version=1.0.0.7, Culture=neutral, PublicKeyToken=52fc4999228d34f7"/>
+  </Resources>
+</ManagementPackFragment>
